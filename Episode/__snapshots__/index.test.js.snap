@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Episode renders the Episode component 1`] = `
+<amp-story-page
+  background-audio="fakeAudioSnippet.mp3"
+  id="page00"
+>
+  <amp-story-grid-layer
+    template="fill"
+  >
+    <amp-video
+      autoplay=""
+      height="1280"
+      layout="responsive"
+      loop=""
+      poster="/fakePoster.jpg"
+      width="720"
+    >
+      <source
+        src="/fakeVideo.mp4"
+        type="video/mp4"
+      />
+    </amp-video>
+  </amp-story-grid-layer>
+  <amp-story-grid-layer
+    template="vertical"
+  >
+    <div
+      animate-in="fly-in-top"
+      animate-in-duration=".5s"
+      class="episodetitle content"
+    >
+      <h1>
+        fakeTitle
+      </h1>
+    </div>
+    <div
+      animate-in="twirl-in"
+      animate-in-duration="1s"
+      class="imgcontainer content"
+    >
+      <amp-img
+        height="600"
+        layout="responsive"
+        src="/fakeNameMark"
+        width="600"
+      />
+    </div>
+  </amp-story-grid-layer>
+  <amp-story-grid-layer
+    classname="bottom padbutt"
+    template="vertical"
+  >
+    <div
+      animate-in="fly-in-bottom"
+      animate-in-duration="0.9s"
+      class="episodedesc"
+    >
+      <h1>
+        fakeHeadline
+      </h1>
+      <p>
+        with super fake content
+      </p>
+    </div>
+  </amp-story-grid-layer>
+  <amp-story-page-attachment
+    data-cta-text="Podcast jetzt abonnieren"
+    layout="nodisplay"
+  >
+    <div
+      class="abo"
+    >
+      <h2>
+        Abonnieren
+      </h2>
+      <p
+        class="attachment"
+      >
+        NFFS gibts auf folgenden Podcast-Plattformen
+      </p>
+      <p
+        class="attachment"
+      >
+        <a
+          href="fakePodcastShow1"
+        >
+          <amp-img
+            height="68"
+            layout="responsive"
+            src="fakePodcastImage1.jpg"
+            width="268"
+          />
+        </a>
+      </p>
+      <p
+        class="attachment"
+      >
+        <a
+          href="fakePodcastShow2"
+        >
+          <amp-img
+            height="68"
+            layout="responsive"
+            src="fakePodcastImage2.jpg"
+            width="268"
+          />
+        </a>
+      </p>
+      <p
+        class="attachment"
+      >
+        Einfach draufklicken und in der App abonnieren um nichts zu verpassen!
+      </p>
+    </div>
+  </amp-story-page-attachment>
+</amp-story-page>
+`;

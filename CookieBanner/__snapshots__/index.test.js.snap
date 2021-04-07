@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Attachment renders the CookieBanner component 1`] = `
+<amp-user-notification
+  classname=""
+  id="amp-user-notification1"
+  layout="nodisplay"
+>
+  <button
+    class=""
+    on="tap:amp-user-notification1.dismiss"
+  >
+    Yay cookies, nom nom nom
+  </button>
+</amp-user-notification>
+`;

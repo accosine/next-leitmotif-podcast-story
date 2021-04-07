@@ -1,35 +1,37 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
-import Excerpt from "./index";
+import { render } from "@testing-library/react";
+import Cover from "./index";
+import { coverImage, coverVideo } from "../tests/fixtures.js";
 
 const propsWithCategory = {
-  title: "Title - Another Blog Post 2",
-  slug: "another-blog-post-2",
-  path: "article",
-  category: "serverless",
-  date: "2020-02-16T05:35",
-  isCategory: true,
+  coverImage,
+  coverVideo,
 };
 
-const propsWithoutCategory = {
-  title: "Title - Another Blog Post 2",
-  slug: "another-blog-post-2",
-  path: "article",
-  category: "",
-  date: "2020-02-16T05:35",
-  isCategory: false,
-};
+const propsWithoutCategory = {};
 
-describe("Excerpt", () => {
-  it("renders with 'serverless' category", () => {
-    render(<Excerpt {...propsWithCategory} />);
-    expect(screen.getByText("serverless")).toBeInTheDocument();
+describe("Cover", () => {
+  it("renders an AMP Story cover with props", () => {
+    render(<Cover {...propsWithCategory} />);
+
+    const coverContainer = document.querySelector("#cover");
+
+    expect(coverContainer).toBeInTheDocument();
+
+    const theCoverImage = document.querySelector("amp-video");
+
+    expect(theCoverImage).toHaveAttribute("poster", `/${coverImage}`);
+
+    const theCoverSource = document.querySelector("source");
+
+    expect(theCoverSource).toHaveAttribute("src", `/${coverVideo}`);
   });
 });
 
-describe("Excerpt", () => {
-  it("renders without category", () => {
-    render(<Excerpt {...propsWithoutCategory} />);
-    expect(screen.queryByText("serverless")).toBeNull();
+describe("Cover", () => {
+  it("renders an AMP Story cover without props", () => {
+    render(<Cover {...propsWithoutCategory} />);
+    const coverContainer = document.querySelector("#cover");
+    expect(coverContainer).toBeInTheDocument();
   });
 });

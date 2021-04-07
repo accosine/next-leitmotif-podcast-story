@@ -22,7 +22,9 @@ const notificationProps = {
 describe("AmpImg", () => {
   it("renders with the role of an <img/>", () => {
     render(<AmpImg {...imgProps} />);
+
     const ampImg = screen.getByRole("img");
+
     expect(ampImg).toBeInTheDocument();
     expect(ampImg).toHaveAttribute("alt", "This is so alt");
     expect(ampImg).toHaveAttribute("src", "useTheSource");
@@ -35,32 +37,42 @@ describe("AmpImg", () => {
 describe("AmpUserNotification", () => {
   it("renders AmpUserNotification with default values", () => {
     render(<AmpUserNotification />);
+
     const container = document.querySelector("#amp-user-notification1");
+
     expect(container).toBeInTheDocument();
     expect(container).toHaveAttribute("layout", "nodisplay");
     expect(container).toHaveAttribute("id", "amp-user-notification1");
-    expect(container).toHaveAttribute("class", "");
+    // BEWARE: Renderer doesn't recognize classNames as classes on amp components
+    expect(container).toHaveAttribute("className", "");
   });
 
   it("renders AmpUserNotification values from props", () => {
     render(<AmpUserNotification {...notificationProps} />);
+
     const container = document.querySelector("#justasillynotification");
+
     expect(container).toBeInTheDocument();
     expect(container).toHaveAttribute("layout", "somedisplay");
     expect(container).toHaveAttribute("id", "justasillynotification");
-    expect(container).toHaveClass("sillyclassname");
+    // BEWARE: Renderer doesn't recognize classNames as classes on amp components
+    expect(container).toHaveAttribute("className", "sillyclassname");
   });
 
-  it("renders AmpUserNotification button with custom values", () => {
+  it("renders AmpUserNotification button with default values", () => {
     render(<AmpUserNotification />);
+
     const button = screen.getByRole("button");
+
     expect(button).toBeInTheDocument();
     expect(button).toHaveAttribute("class", "");
   });
 
   it("renders AmpUserNotification button with custom values", () => {
     render(<AmpUserNotification {...notificationProps} />);
+
     const button = screen.getByRole("button");
+
     expect(button).toBeInTheDocument();
     expect(button).toHaveClass("wantcookies");
     expect(button).toHaveTextContent("More cookies?");

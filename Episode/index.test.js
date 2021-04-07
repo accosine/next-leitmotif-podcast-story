@@ -1,35 +1,31 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
-import Excerpt from "./index";
+import "@testing-library/jest-dom/extend-expect";
+import { render } from "@testing-library/react";
+import Episode from "./index";
+import {
+  audiosnippet,
+  content,
+  nameMark,
+  podcasts,
+  poster,
+  title,
+  video,
+  number,
+} from "../tests/fixtures.js";
 
-const propsWithCategory = {
-  title: "Title - Another Blog Post 2",
-  slug: "another-blog-post-2",
-  path: "article",
-  category: "serverless",
-  date: "2020-02-16T05:35",
-  isCategory: true,
+const episodeProps = {
+  audiosnippet,
+  content,
+  nameMark,
+  number,
+  podcasts,
+  poster,
+  title,
+  video,
 };
-
-const propsWithoutCategory = {
-  title: "Title - Another Blog Post 2",
-  slug: "another-blog-post-2",
-  path: "article",
-  category: "",
-  date: "2020-02-16T05:35",
-  isCategory: false,
-};
-
-describe("Excerpt", () => {
-  it("renders with 'serverless' category", () => {
-    render(<Excerpt {...propsWithCategory} />);
-    expect(screen.getByText("serverless")).toBeInTheDocument();
-  });
-});
-
-describe("Excerpt", () => {
-  it("renders without category", () => {
-    render(<Excerpt {...propsWithoutCategory} />);
-    expect(screen.queryByText("serverless")).toBeNull();
+describe("Episode", () => {
+  it("renders the Episode component", () => {
+    const { container } = render(<Episode {...episodeProps} />);
+    expect(container.firstChild).toMatchSnapshot();
   });
 });

@@ -2,6 +2,12 @@ import React from "react";
 import MDX from "@mdx-js/runtime";
 import css from "styled-jsx/css";
 import Layout from "../Layout";
+// TODO: REMOVE THIS 👇 AS SOON AS THIS IS FIXED https://github.com/vercel/styled-jsx/issues/695
+import _JSXStyle from "styled-jsx/style";
+if (typeof global !== "undefined") {
+  Object.assign(global, { _JSXStyle });
+}
+// TODO: REMOVE THIS 👆 AS SOON AS THIS IS FIXED https://github.com/vercel/styled-jsx/issues/695
 
 const Page = ({
   audiosnippet,

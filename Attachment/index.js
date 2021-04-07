@@ -1,6 +1,7 @@
 import React from "react";
 export const Attachment = ({ podcasts }) => {
   const podcastSubscriptions = Object.keys(podcasts);
+
   return (
     <>
       <amp-story-page-attachment
@@ -9,7 +10,9 @@ export const Attachment = ({ podcasts }) => {
       >
         <div className="abo">
           <h2>Abonnieren</h2>
-          <p className="attachment">NFFS gibts auf folgenden Podcast-Plattformen</p>
+          <p className="attachment">
+            NFFS gibts auf folgenden Podcast-Plattformen
+          </p>
           {podcastSubscriptions.map((sub) => (
             <p key={sub} className="attachment">
               <a href={podcasts[sub].show}>

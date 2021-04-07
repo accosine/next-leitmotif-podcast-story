@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageDocument renders the Page component 1`] = `
+<amp-story
+  classname="jsx-3795631200"
+  poster-portrait-src="/undefined"
+  publisher="undefined"
+  publisher-logo-src="/undefined"
+  standalone=""
+  title="undefined"
+>
+  <amp-sidebar
+    id="sidebar1"
+    layout="nodisplay"
+  >
+    <ul>
+      <li>
+        <a
+          class="sidebarfont capitalize"
+          href="/fakeMenuItem1"
+        >
+          fakeMenuItem1
+        </a>
+      </li>
+      <li>
+        <a
+          class="sidebarfont capitalize"
+          href="/fakeMenuItem2"
+        >
+          fakeMenuItem2
+        </a>
+      </li>
+      <li>
+        <a
+          class="sidebarfont"
+          href="fakePodcastShow1"
+        >
+          fakePodcastName1
+           Podcasts
+        </a>
+      </li>
+      <li>
+        <a
+          class="sidebarfont"
+          href="fakePodcastShow2"
+        >
+          fakePodcastName2
+           Podcasts
+        </a>
+      </li>
+    </ul>
+  </amp-sidebar>
+  <amp-story-page
+    classname="jsx-2990834171"
+    id="page"
+  >
+    <amp-story-grid-layer
+      classname="jsx-2990834171"
+      template="fill"
+    >
+      <amp-video
+        autoplay=""
+        classname="jsx-2990834171"
+        height="1280"
+        layout="responsive"
+        loop=""
+        poster="/fakePoster.jpg"
+        width="720"
+      >
+        <source
+          class="jsx-2990834171"
+          src="/fakeVideo.mp4"
+          type="video/mp4"
+        />
+      </amp-video>
+    </amp-story-grid-layer>
+    <amp-story-grid-layer
+      classname="jsx-2990834171"
+      template="vertical"
+    >
+      <div
+        animate-in="fly-in-bottom"
+        animate-in-duration="0.9s"
+        class="jsx-2990834171 episodedesc"
+      >
+        <h1>
+          fakeHeadline
+        </h1>
+        <p>
+          with super fake content
+        </p>
+      </div>
+    </amp-story-grid-layer>
+  </amp-story-page>
+</amp-story>
+`;
