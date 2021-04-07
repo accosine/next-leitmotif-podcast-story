@@ -60,7 +60,7 @@ exports[`Episode renders the Episode component 1`] = `
         fakeHeadline
       </h1>
       <p>
-        with super fake content
+         with super fake content
       </p>
     </div>
   </amp-story-grid-layer>
