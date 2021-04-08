@@ -48,5 +48,18 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/accosine/next-leitmotif-podcast-story.git"
+  },
+  "release": {
+    "branches": [
+      "main",
+      {
+        "name": "beta",
+        "prerelease": true
+      },
+      {
+        "name": "alpha",
+        "prerelease": true
+      }
+    ]
   }
 }
