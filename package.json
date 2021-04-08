@@ -61,5 +61,8 @@
         "prerelease": true
       }
     ]
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
