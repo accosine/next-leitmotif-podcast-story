@@ -11,11 +11,13 @@ import {
   title,
   video,
   number,
+  cta,
 } from "../tests/fixtures.js";
 
 const episodeProps = {
   audiosnippet,
   content,
+  cta,
   nameMark,
   number,
   podcasts,

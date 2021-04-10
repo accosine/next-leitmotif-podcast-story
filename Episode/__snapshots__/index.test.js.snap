@@ -72,12 +72,12 @@ exports[`Episode renders the Episode component 1`] = `
       class="abo"
     >
       <h2>
-        Abonnieren
+        fakeCtaSubscribeText
       </h2>
       <p
         class="attachment"
       >
-        NFFS gibts auf folgenden Podcast-Plattformen
+        fakeCtaDescribeText
       </p>
       <p
         class="attachment"
@@ -110,7 +110,7 @@ exports[`Episode renders the Episode component 1`] = `
       <p
         class="attachment"
       >
-        Einfach draufklicken und in der App abonnieren um nichts zu verpassen!
+        fakeCtaInviteText
       </p>
     </div>
   </amp-story-page-attachment>

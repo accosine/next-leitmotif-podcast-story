@@ -12,7 +12,15 @@ if (typeof global !== "undefined") {
 export const Home = ({ posts, configuration }) => {
   // TODO: use this 👇
   // const isLocal = process.env.NODE_ENV === "development";
-  const { coverImage, coverVideo, nameMark, podcasts } = configuration;
+  const {
+    coverImage,
+    coverVideo,
+    nameMark,
+    podcasts,
+    ctaSubscribe,
+    ctaDescribe,
+    ctaInvite,
+  } = configuration;
 
   return (
     <Layout configuration={configuration}>
@@ -24,6 +32,7 @@ export const Home = ({ posts, configuration }) => {
             {...post}
             nameMark={nameMark}
             podcasts={podcasts}
+            cta={{ ctaSubscribe, ctaDescribe, ctaInvite }}
           />
         ))}
     </Layout>

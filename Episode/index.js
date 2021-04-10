@@ -5,20 +5,21 @@ import Attachment from "../Attachment";
 const Episode = ({
   audiosnippet,
   bitlength,
+  content,
+  cta,
   date,
   draft,
   duration,
   episode,
   guid,
   image,
+  nameMark,
   number,
+  podcasts,
   poster,
   subtitle,
   title,
   video,
-  content,
-  nameMark,
-  podcasts,
 }) => {
   return (
     <>
@@ -71,7 +72,7 @@ const Episode = ({
             </div>
           </amp-story-grid-layer>
         )}
-        <Attachment podcasts={podcasts} />
+        <Attachment podcasts={podcasts} cta={cta} />
       </amp-story-page>
     </>
   );
