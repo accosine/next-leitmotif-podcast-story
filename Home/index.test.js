@@ -5,14 +5,19 @@ import { Home } from "./index";
 import {
   coverImage,
   coverVideo,
+  cta,
   nameMark,
   podcasts,
   posts,
 } from "../tests/fixtures.js";
 
+const { ctaSubscribe, ctaDescribe, ctaInvite } = cta;
 const configuration = {
   coverImage,
   coverVideo,
+  ctaDescribe,
+  ctaInvite,
+  ctaSubscribe,
   nameMark,
   podcasts,
 };

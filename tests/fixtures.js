@@ -21,3 +21,8 @@ export const poster = "fakePoster.jpg";
 export const posts = [{ guid: "1234" }];
 export const title = "fakeTitle";
 export const video = "fakeVideo.mp4";
+export const cta = {
+  ctaSubscribe: "fakeCtaSubscribeText",
+  ctaDescribe: "fakeCtaDescribeText",
+  ctaInvite: "fakeCtaInviteText",
+};

@@ -1,6 +1,7 @@
 import React from "react";
-export const Attachment = ({ podcasts }) => {
+export const Attachment = ({ podcasts, cta }) => {
   const podcastSubscriptions = Object.keys(podcasts);
+  const { ctaSubscribe, ctaDescribe, ctaInvite } = cta;
 
   return (
     <>
@@ -9,10 +10,8 @@ export const Attachment = ({ podcasts }) => {
         data-cta-text="Podcast jetzt abonnieren"
       >
         <div className="abo">
-          <h2>Abonnieren</h2>
-          <p className="attachment">
-            NFFS gibts auf folgenden Podcast-Plattformen
-          </p>
+          <h2>{ctaSubscribe}</h2>
+          <p className="attachment">{ctaDescribe}</p>
           {podcastSubscriptions.map((sub) => (
             <p key={sub} className="attachment">
               <a href={podcasts[sub].show}>
@@ -25,10 +24,7 @@ export const Attachment = ({ podcasts }) => {
               </a>
             </p>
           ))}
-          <p className="attachment">
-            Einfach draufklicken und in der App abonnieren um nichts zu
-            verpassen!
-          </p>
+          <p className="attachment">{ctaInvite}</p>
         </div>
       </amp-story-page-attachment>
     </>
