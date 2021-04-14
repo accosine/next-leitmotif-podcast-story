@@ -1,6 +1,6 @@
 {
   "name": "@accosine/nepodory-leitmotif",
-  "version": "0.0.1-development",
+  "version": "0.0.0-development",
   "scripts": {
     "dev": "next",
     "build": "next build",
