@@ -19,11 +19,14 @@ export const Layout = ({ children, configuration }) => {
     <>
       <style jsx global>
         {`
+          @font-face {
+            font-family: "Roboto Mono";
+            src: url("RobotoMono.ttf") format("truetype");
+          }
           amp-sidebar {
             background-color: ${backgroundColor};
           }
           amp-story {
-            font-family: "Oswald", sans-serif;
             color: ${textColor};
           }
           amp-story-page {
@@ -44,13 +47,17 @@ export const Layout = ({ children, configuration }) => {
           a {
             color: ${linkColor};
           }
+          html {
+            font-family: "Roboto Mono";
+          }
           h1 {
             font-weight: bold;
-            font-size: 2.875em;
+            font-size: 16px;
             font-weight: normal;
             line-height: 1.174;
           }
           p {
+            font-size: 12px;
             font-weight: normal;
             color: ${textColor};
           }
@@ -75,9 +82,11 @@ export const Layout = ({ children, configuration }) => {
             line-height: 2em;
           }
           .imgcontainer {
-            height: 20vw;
-            width: 20vw;
-            margin: 0 auto;
+            height: 30vw;
+            width: 30vw;
+            position: absolute;
+            justify-self: center;
+            top: 31%;
           }
           .aligner {
             align-items: center;
