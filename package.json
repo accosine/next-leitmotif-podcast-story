@@ -2,12 +2,8 @@
   "name": "@accosine/nepodory-leitmotif",
   "version": "0.0.0-development",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start",
     "test": "node ./tests/jest.js",
     "test:ci": "node ./tests/jest.js --maxWorkers=2",
-    "export": "next build && next export",
     "semantic-release": "semantic-release"
   },
   "license": "MIT",
