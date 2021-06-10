@@ -24,7 +24,9 @@ export const Home = ({ posts, configuration }) => {
 
   return (
     <Layout configuration={configuration}>
-      <Cover coverImage={coverImage} coverVideo={coverVideo} />
+      {!!coverImage && (
+        <Cover coverImage={coverImage} coverVideo={coverVideo} />
+      )}
       {posts &&
         posts.map((post) => (
           <Episode
