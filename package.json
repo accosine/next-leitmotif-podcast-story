@@ -15,7 +15,7 @@
     "@babel/preset-env": "^7.12.17",
     "@babel/preset-react": "^7.13.13",
     "@mdx-js/runtime": "1.6.22",
-    "@testing-library/dom": "^7.30.3",
+    "@testing-library/dom": "^8.0.0",
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
     "babel-jest": "^26.6.3",
