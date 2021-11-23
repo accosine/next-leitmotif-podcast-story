@@ -16,7 +16,7 @@
     "@babel/preset-react": "^7.13.13",
     "@mdx-js/runtime": "1.6.22",
     "@testing-library/dom": "^7.30.3",
-    "@testing-library/jest-dom": "^5.11.10",
+    "@testing-library/jest-dom": "^5.15.1",
     "@testing-library/react": "^11.2.6",
     "babel-jest": "^26.6.3",
     "identity-obj-proxy": "^3.0.0",
